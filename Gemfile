@@ -29,6 +29,13 @@ group :development, :test do
   gem 'rubocop'
 end
 
+group :test do
+  gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'rspec-rails'
+end
+
 group :production do
   # Makes running your Rails app easier. Based on the ideas behind 12factor.net
   gem 'rails_12factor'
