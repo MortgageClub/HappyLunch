@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  get "/sends_menu_to_slack" => "lunch#sends_menu_to_slack"
+  post "/receives_order_info_and_process" => "lunch#receives_order_info_and_process"
+  get "/sends_success_message_to_slack" => "lunch#sends_success_message_to_slack"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
