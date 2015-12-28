@@ -13,9 +13,8 @@ class SendMessageToSlackService
   private
 
   def self.format_message
-    dishes = Dish.all
     result_text = ["Today list"]
-    dishes.each_with_index do |dish, index|
+    Dish.all.each_with_index do |dish, index|
       result_text.push("#{index+1}. #{dish.name} #{dish.price}")
     end
     result_text.join("\n")
