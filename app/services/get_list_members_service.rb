@@ -1,7 +1,7 @@
 class GetListMembersService
   def self.call
     connection = Faraday.new(url: "https://slack.com/api/")
-    response = connection.get "users.list", {token: ENV["SLACK_TOKEN"], presence: true, pretty: 1}
+    response = connection.get "users.list", token: ENV["SLACK_TOKEN"], presence: true, pretty: 1
     data = JSON.parse(response.body)
     members = []
 
