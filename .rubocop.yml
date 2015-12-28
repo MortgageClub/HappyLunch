@@ -1,0 +1,32 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  RunRailsCops: true
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'docs/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'features/support/_circleci_formatter.rb'
+
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  EnforcedStyleForEmptyBraces: no_space
+  EnforcedStyle: no_space
+
+Style/Documentation:
+  Enabled: false
+
+Style/AlignParameters:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
