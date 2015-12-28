@@ -17,3 +17,4 @@
 /tmp
 .env
 vcr.log
+.byebug_history
