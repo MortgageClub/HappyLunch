@@ -2,12 +2,8 @@ class SendMessageToSlackService
   def self.call(channel)
     connection = Faraday.new(url: "https://slack.com/api/")
     response = connection.get "chat.postMessage", channel: channel, token: ENV["SLACK_TOKEN"], text: format_message
-
     data = JSON.parse(response.body)
-    if data["ok"]
-      text = data["message"]
-    end
-    text
+    data["ok"]
   end
 
   private
