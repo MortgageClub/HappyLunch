@@ -6,7 +6,9 @@ class GetMenuService
     doc = get_html('http://giachanhcamtuyet.com.vn/index.php?m=dat-tiec&id=12&t=orders&s=1')
     count = 1
 
+    Order.create(order_date: Time.zone.now) unless Order.today
     Dish.update_all(item_number: nil)
+
     get_elements(doc, "div.list_item").each do |item|
       name_element = get_element(item, "div.name")
       price_element = get_element(item, "div.price input")
