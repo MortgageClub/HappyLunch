@@ -34,6 +34,8 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 group :production do
