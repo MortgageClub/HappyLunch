@@ -1,0 +1,78 @@
+require 'capybara'
+require 'capybara/poltergeist'
+require 'phantomjs'
+
+class OrderLunchService
+  include Capybara::DSL
+
+  attr_accessor :crawler
+
+  def initialize
+    @crawler = set_up_crawler
+  end
+
+  def call
+    go_to_gcct
+    fill_order_item
+    fill_contact_info
+    skip_captcha
+    crawler.save_and_open_page
+    # submit_order
+  end
+
+  private
+
+  def go_to_gcct
+    crawler.visit("http://giachanhcamtuyet.com.vn/index.php?m=dat-tiec&id=12&t=orders&s=1")
+  end
+
+  def fill_order_item
+    all_item_element = crawler.all("div.list_item")
+
+    Order.today.first.order_items.each do |item|
+      item_element = crawler.find(".name", text: item.dish.name)
+      parent = item_element.find(:xpath, '..')
+      set_quantity_item(parent)
+      select_item(parent)
+    end
+  end
+
+  def fill_contact_info
+    crawler.find("#fullname").set("Khánh Ly")
+    crawler.find("#address").set("93bis Nguyễn Văn Thủ, P. Đa Kao, Q.1")
+    crawler.find("#tel").set("012343561321")
+    crawler.find("#email").set("ly@mortgageclub.co")
+  end
+
+  def skip_captcha
+    byebug
+    crawler.find("#captcha").set("6BA2C")
+    crawler.find("#captcha_sid").set("911db58a17dad229cdb9f469dc4cf616")
+  end
+
+  def set_quantity_item(item)
+    quantity_item = item.find("div.quantity input")
+    quantity_item.set(quantity_item.value.to_i + 1)
+  end
+
+  def select_item(item)
+    click_item = item.find("div.request a")
+    click_item.click if click_item.text == "Chọn"
+  end
+
+  def submit_order
+    crawler.find("input[type=submit]").click
+  end
+
+  def set_up_crawler
+    Capybara.register_driver :poltergeist do |app|
+      Capybara::Poltergeist::Driver.new(app, {
+        js_errors: true, timeout: 60, inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes']
+      })
+    end
+    Capybara.ignore_hidden_elements = false
+    Capybara.default_max_wait_time = 60
+    Capybara::Session.new(:poltergeist)
+    # Capybara::Session.new(:selenium)
+  end
+end
