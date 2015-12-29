@@ -9,8 +9,7 @@ namespace :slack do
 
   task :order_lunch do
     puts "Start ordering lunch..."
-    order = OrderLunchService.new
-    order.call
+    OrderLunchService.new.call
     puts "Finish ordering lunch..."
   end
 
