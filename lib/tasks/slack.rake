@@ -1,13 +1,13 @@
 namespace :slack do
   desc "Notify Lunch Menu"
 
-  task :get_menu do
+  task :get_menu => :environment do
     puts "Start getting menu..."
     GetMenuService.call
     puts "Finish getting menu..."
   end
 
-  task :order_lunch do
+  task :order_lunch => :environment do
     puts "Start ordering lunch..."
     OrderLunchService.new.call
     puts "Finish ordering lunch..."
