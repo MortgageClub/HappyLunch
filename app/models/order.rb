@@ -4,8 +4,8 @@ class Order < ActiveRecord::Base
   scope :today, -> { where("created_at >= ?", Time.zone.now.beginning_of_day) }
 
   def self.today_order_completed?
-    return false unless @today_order
     @today_order = self.today.first
+    return false unless @today_order
     GetListMembersService.call.uniq.count == @today_order.order_items.pluck(:username).uniq.count
   end
 
