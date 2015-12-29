@@ -1,23 +1,21 @@
 namespace :slack do
-  desc "Notify Lunch Menu"
-
-  task :get_menu do
-    puts "Start getting menu..."
+  task get_menu: :environment do
     GetMenuService.call
-    puts "Finish getting menu..."
   end
 
-  task :order_lunch do
-    puts "Start ordering lunch..."
+  task order_lunch: :environment do
     OrderLunchService.new.call
-    puts "Finish ordering lunch..."
   end
 
-  task :notify_lunch_menu => :environment do
-    SendMessageToSlackService.post_lunch_menu_to_slack_lunch("#lunch")
+  task notify_lunch_menu: :environment do
+    SlackMessageServices::SendMenu.call
   end
 
-  task :notify_user_order => :environment do
-    Order.notify_users
+  task notify_user_order: :environment do
+    SlackMessageServices::RemindMembersWhoForgetOrdering.call
+  end
+
+  task send_success_message: :environment do
+    SlackMessageServices::SendSuccessMessage.call
   end
 end

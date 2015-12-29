@@ -1,20 +1,16 @@
 module SlackMessageServices
-  class SendMenu
-    def self.call(channel, *args)
-      connection = Faraday.new(url: "https://slack.com/api/")
-      response = connection.get "chat.postMessage", channel: channel, token: ENV["SLACK_TOKEN"], text: format_message
-      data = JSON.parse(response.body)
-      data["ok"]
+  class SendMenu < Base
+    def self.call
+      content = format_content
+      send_message(content)
     end
 
-    private
-
-    def self.format_message
-      result_text = ["Menu for today"]
-      Dish.all.each_with_index do |dish, index|
-        result_text.push("#{index+1}. #{dish.name} #{dish.price}k VND")
+    def self.format_content
+      content = ["Menu for today"]
+      Dish.today.each do |dish|
+        content << "#{dish.item_number}. #{dish.name} #{dish.price} VND"
       end
-      result_text.join("\n")
+      content.join("\n")
     end
   end
 end
