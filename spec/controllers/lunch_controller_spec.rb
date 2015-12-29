@@ -3,8 +3,8 @@ require "rails_helper"
 describe LunchController do
   describe "GET #menu" do
     context "when there are some dishes" do
-      let!(:first_dish) { FactoryGirl.create(:dish, name: "Banh Mi", price: 15000, item_number: 99) }
-      let!(:second_dish) { FactoryGirl.create(:dish, name: "Com Tam", price: 30000, item_number: 100) }
+      let!(:first_dish) { FactoryGirl.create(:dish, name: "Banh Mi", price: 15_000, item_number: 99) }
+      let!(:second_dish) { FactoryGirl.create(:dish, name: "Com Tam", price: 30_000, item_number: 100) }
 
       it "renders a json which contain array of dishes" do
         get :menu
