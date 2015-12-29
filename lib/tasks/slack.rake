@@ -14,8 +14,10 @@ namespace :slack do
   end
 
   task :notify_lunch_menu => :environment do
-    puts "Notifying lunch menu job is running"
-    SendMessageToSlackService.call("#lunch")
-    puts "Notifying lunch is running on background"
+    SendMessageToSlackService.post_lunch_menu_to_slack_lunch("#lunch")
+  end
+
+  task :notify_user_order => :environment do
+    Order.notify_users
   end
 end
