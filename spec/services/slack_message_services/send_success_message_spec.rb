@@ -9,7 +9,9 @@ describe SlackMessageServices::SendSuccessMessage do
     let!(:second_order_item) { FactoryGirl.create(:order_item, order: order, dish: second_dish) }
 
     it "returns true" do
-      expect(described_class.call).to be_truthy
+      VCR.use_cassette("success_message") do
+        expect(described_class.call).to be_truthy
+      end
     end
 
     it "sends a success message with proper content" do
