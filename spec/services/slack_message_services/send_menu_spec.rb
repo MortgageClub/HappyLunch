@@ -6,7 +6,7 @@ describe SlackMessageServices::SendMenu do
 
   it "Sends all list of dishes to lunch channel" do
     VCR.use_cassette("list_of_dishes") do
-      expect(described_class.call("#lunch")).to be_truthy
+      expect(described_class.post_lunch_menu_to_slack_lunch("#lunch")).to be_truthy
     end
   end
 end
