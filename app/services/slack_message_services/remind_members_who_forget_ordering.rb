@@ -7,8 +7,6 @@ module SlackMessageServices
       send_message(content)
     end
 
-    private
-
     def self.format_content
       username_string = members_have_not_ordered_lunch.map { |member| "@#{member}" }
       "Hey #{username_string.join(', ')}! You haven't ordered lunch yet. Please order now!"
