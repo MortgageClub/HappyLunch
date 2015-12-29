@@ -2,6 +2,8 @@
 === Background
 At MortgageClub, we have free catered lunch everyday. Previously, (1) our assistant would ask us what we want for lunch, (2) we then go to the restaurant website (giachanhcamtuyet, for example), (3) choose what we want to eat, (4) tell the assistant, and finally (5) she would place an order on the restaurant website.
 
-We thought that we could create a Slackbot to automate all of these steps.
+We thought that we could create a Slackbot to automate all of these steps. So our team spent a day to code it up as a year-end fun project. We thought it might be useful to other engineering teams in Vietnam as well so we've made it public. Here are a few features that you can add to this Slackbot:
+- Ask for delivery information: name, address, phone number... instead of hardcoding it
+- Add more lunch providers to the application
 
 === How to deploy
