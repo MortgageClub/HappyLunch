@@ -3,16 +3,16 @@ namespace :slack do
     GetMenuService.call
   end
 
-  task order_lunch: :environment do
-    OrderLunchService.new.call
-  end
-
   task notify_lunch_menu: :environment do
     SlackMessageServices::SendMenu.call
   end
 
-  task notify_user_order: :environment do
+  task remind_members_order_lunch: :environment do
     SlackMessageServices::RemindMembersWhoForgetOrdering.call
+  end
+
+  task order_lunch: :environment do
+    OrderLunchService.new.call
   end
 
   task send_success_message: :environment do
