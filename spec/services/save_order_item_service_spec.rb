@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe SaveOrderItemService do
   context "with existing items" do
-    let!(:order) { FactoryGirl.create(:order)}
+    let!(:order) { FactoryGirl.create(:order) }
     let(:first_dish) { FactoryGirl.create(:dish) }
     let(:second_dish) { FactoryGirl.create(:dish) }
     let(:third_dish) { FactoryGirl.create(:dish) }
