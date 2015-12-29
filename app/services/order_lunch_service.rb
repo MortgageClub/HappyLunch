@@ -81,6 +81,6 @@ class OrderLunchService
 
   def check_status
     success_message = crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi! Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
-    success_message ? @result = true : @result = false
+    @result = success_message ? true : false
   end
 end
