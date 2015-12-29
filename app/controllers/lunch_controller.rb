@@ -14,6 +14,8 @@ class LunchController < ApplicationController
   private
 
   def check_request
-    return if params["token"] != VALID_TOKEN
+    if params["token"] != VALID_TOKEN
+      return render json: { error: "No access permission" }, status: 401
+    end
   end
 end
