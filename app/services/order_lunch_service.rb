@@ -4,10 +4,11 @@ require 'capybara/poltergeist'
 class OrderLunchService
   include Capybara::DSL
 
-  attr_accessor :crawler
+  attr_accessor :crawler, :result
 
   def initialize
     @crawler = set_up_crawler
+    @result = false
   end
 
   def call
@@ -17,7 +18,9 @@ class OrderLunchService
     skip_captcha
     submit_order
     sleep(1)
+    check_status
     close_crawler
+    result
   end
 
   private
@@ -74,5 +77,10 @@ class OrderLunchService
 
   def close_crawler
     crawler.driver.quit
+  end
+
+  def check_status
+    success_message = crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi! Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
+    success_message ? @result = true : @result = false
   end
 end
