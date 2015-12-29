@@ -26,12 +26,10 @@ class OrderLunchService
   end
 
   def fill_order_item
-    all_item_element = crawler.all("div.list_item")
-
     Order.today.first.order_items.each do |item|
       item_element = crawler.all(".name", text: item.dish.name)[0]
       parent = item_element.find(:xpath, '..')
-      set_quantity_item(parent)
+      assign_quantity_item(parent)
       select_item(parent)
     end
   end
@@ -48,7 +46,7 @@ class OrderLunchService
     crawler.find("#captcha_sid").set("911db58a17dad229cdb9f469dc4cf616")
   end
 
-  def set_quantity_item(item)
+  def assign_quantity_item(item)
     quantity_item = item.find("div.quantity input")
     quantity_item.set(quantity_item.value.to_i + 1)
   end
@@ -64,9 +62,8 @@ class OrderLunchService
 
   def set_up_crawler
     Capybara.register_driver :poltergeist do |app|
-      Capybara::Poltergeist::Driver.new(app, {
-        js_errors: false, timeout: 60, inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes']
-      })
+      Capybara::Poltergeist::Driver.new(app, js_errors: false, timeout: 60,
+        inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes'])
     end
     Capybara.ignore_hidden_elements = false
     Capybara.default_max_wait_time = 60

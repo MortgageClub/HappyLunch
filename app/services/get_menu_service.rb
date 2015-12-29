@@ -7,16 +7,14 @@ class GetMenuService
     init_order
     doc = get_html('http://giachanhcamtuyet.com.vn/index.php?m=dat-tiec&id=12&t=orders&s=1')
 
-
     get_elements(doc, "div.list_item").each do |item|
       name_element = get_element(item, "div.name")
       price_element = get_element(item, "div.price input")
-      price = price_element["value"].to_f
 
-      next unless valid_dish?(price)
+      next unless valid_dish?(price_element["value"].to_f)
 
       item_number += 1
-      insert_or_update_dish(name_element.text, price, item_number)
+      insert_or_update_dish(name_element.text, price_element["value"].to_f, item_number)
     end
   end
 
