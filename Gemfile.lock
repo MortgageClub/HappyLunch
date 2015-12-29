@@ -181,6 +181,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    shoulda-matchers (3.0.1)
+      activesupport (>= 4.0.0)
     spring (1.6.1)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -235,6 +237,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   selenium-webdriver
+  shoulda-matchers
   spring
   therubyracer
   vcr
