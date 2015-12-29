@@ -66,8 +66,10 @@ class OrderLunchService
 
   def set_up_crawler
     Capybara.register_driver :poltergeist do |app|
-      Capybara::Poltergeist::Driver.new(app, js_errors: false, timeout: 60,
-        inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes'])
+      Capybara::Poltergeist::Driver.new(
+        app, js_errors: false, timeout: 60, inspector: true,
+        phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes']
+      )
     end
     Capybara.ignore_hidden_elements = false
     Capybara.default_max_wait_time = 60
@@ -80,7 +82,8 @@ class OrderLunchService
   end
 
   def check_status
-    success_message = crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi! Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
-    @result = success_message ? true : false
+    success_message = crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi!
+      Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
+    success_message ? @result = true : @result = false
   end
 end
