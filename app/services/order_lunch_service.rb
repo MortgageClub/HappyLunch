@@ -1,6 +1,5 @@
 require 'capybara'
 require 'capybara/poltergeist'
-require 'phantomjs'
 
 class OrderLunchService
   include Capybara::DSL
@@ -16,8 +15,8 @@ class OrderLunchService
     fill_order_item
     fill_contact_info
     skip_captcha
-    crawler.save_and_open_page
-    # submit_order
+    submit_order
+    sleep(1)
   end
 
   private
@@ -30,7 +29,7 @@ class OrderLunchService
     all_item_element = crawler.all("div.list_item")
 
     Order.today.first.order_items.each do |item|
-      item_element = crawler.find(".name", text: item.dish.name)
+      item_element = crawler.all(".name", text: item.dish.name)[0]
       parent = item_element.find(:xpath, '..')
       set_quantity_item(parent)
       select_item(parent)
@@ -38,14 +37,13 @@ class OrderLunchService
   end
 
   def fill_contact_info
-    crawler.find("#fullname").set("Khánh Ly")
-    crawler.find("#address").set("93bis Nguyễn Văn Thủ, P. Đa Kao, Q.1")
-    crawler.find("#tel").set("012343561321")
-    crawler.find("#email").set("ly@mortgageclub.co")
+    crawler.find("#fullname").set("Khánh Linh")
+    crawler.find("#address").set("25 Nguyễn Hữu Cầu, P. Cầu Kho, Q.1")
+    crawler.find("#tel").set("017893561332")
+    crawler.find("#email").set("ly@gardenorganic.co")
   end
 
   def skip_captcha
-    byebug
     crawler.find("#captcha").set("6BA2C")
     crawler.find("#captcha_sid").set("911db58a17dad229cdb9f469dc4cf616")
   end
@@ -67,7 +65,7 @@ class OrderLunchService
   def set_up_crawler
     Capybara.register_driver :poltergeist do |app|
       Capybara::Poltergeist::Driver.new(app, {
-        js_errors: true, timeout: 60, inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes']
+        js_errors: false, timeout: 60, inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes']
       })
     end
     Capybara.ignore_hidden_elements = false

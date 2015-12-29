@@ -24,7 +24,8 @@ gem 'faraday_middleware-parse_oj', '~> 0.3.0'
 gem 'nokogiri'
 gem 'selenium-webdriver'
 gem 'capybara'
-gem 'phantomjs'
+gem 'launchy'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug'
