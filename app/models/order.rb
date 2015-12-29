@@ -3,15 +3,18 @@ class Order < ActiveRecord::Base
 
   scope :today, -> { where("created_at >= ?", Time.zone.now.beginning_of_day) }
 
-  def self.today_order_completed?
-    return false unless self.today.first
-    GetListMembersService.call.uniq.count == self.today.first.order_items.pluck(:username).uniq.count
+  def self.someone_have_not_ordered?
+    GetListMembersService.call.uniq.count > self.today.first.order_items.pluck(:username).uniq.count
+  end
+
+  def self.existing_today_order?
+    self.today.first
   end
 
   def self.notify_users
-    return if today_order_completed?
-    @today_order = self.today.first
-    unorder_members = GetListMembersService.call.uniq - @today_order.order_items.pluck(:username).uniq
-    SendMessageToSlackService.remind_user_order(unorder_members)
+    return unless existing_today_order? && someone_have_not_ordered?
+
+    unorder_members = GetListMembersService.call - today.first.order_items.pluck(:username).uniq
+    SendMessageToSlackService.remind_member_order(unorder_members)
   end
 end

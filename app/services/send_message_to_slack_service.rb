@@ -15,11 +15,8 @@ class SendMessageToSlackService
   end
 
   def self.remind_user_order(users)
-    rs_string = []
-    users.each do |member|
-      rs_string.push("@#{member}")
-    end
-    call("#lunch", "Hey #{rs_string.join(', ')}! You haven't ordered lunch yet. Please order now!", {link_names: 1})
+    username_string = users.map { |member| "@#{member}" }
+    call("#lunch", "Hey #{username_string.join(', ')}! You haven't ordered lunch yet. Please order now!", {link_names: 1})
   end
 
   private
