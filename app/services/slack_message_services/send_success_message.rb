@@ -15,8 +15,6 @@ module SlackMessageServices
       content.join("\n")
     end
 
-    private
-
     def self.order_items
       return [] unless Order.today.last
       Order.today.last.order_items
