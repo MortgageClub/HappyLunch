@@ -14,6 +14,14 @@ class SendMessageToSlackService
     call(channel, format_lunch_menu_message)
   end
 
+  def self.remind_user_order(users)
+    rs_string = []
+    users.each do |member|
+      rs_string.push("@#{member}")
+    end
+    call("#lunch", "Hey #{rs_string.join(', ')}! You haven't ordered lunch yet. Please order now!", {link_names: 1})
+  end
+
   private
 
   def self.format_lunch_menu_message
