@@ -7,6 +7,7 @@ class LunchController < ApplicationController
   end
 
   def order
+    SaveOrderItemService.call(params)
     render status: 200, json: "order"
   end
 
