@@ -1,6 +1,7 @@
 == README
 === Background
 At MortgageClub, we have free catered lunch everyday. Previously, (1) our assistant would ask us what we want for lunch, (2) we then go to the restaurant website (giachanhcamtuyet, for example), (3) choose what we want to eat, (4) tell the assistant, and finally (5) she would place an order on the restaurant website.
+
 We thought that we could create a Slackbot to automate all of these steps.
 
 === How to deploy
