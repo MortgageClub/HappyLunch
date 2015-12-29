@@ -6,9 +6,9 @@ module SlackMessageServices
     end
 
     def self.format_content
-      content = ["Menu for today"]
+      content = ["<!here> Menu for today"]
       Dish.today.each do |dish|
-        content << "#{dish.item_number}. #{dish.name} #{dish.price} VND"
+        content << "#{dish.item_number}. #{dish.name} - #{dish.price} VND"
       end
       content.join("\n")
     end

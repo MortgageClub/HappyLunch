@@ -17,6 +17,7 @@ class OrderLunchService
     skip_captcha
     submit_order
     sleep(1)
+    close_crawler
   end
 
   private
@@ -69,5 +70,9 @@ class OrderLunchService
     Capybara.default_max_wait_time = 60
     Capybara::Session.new(:poltergeist)
     # Capybara::Session.new(:selenium)
+  end
+
+  def close_crawler
+    crawler.driver.quit
   end
 end
