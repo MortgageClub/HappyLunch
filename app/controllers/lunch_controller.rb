@@ -7,8 +7,8 @@ class LunchController < ApplicationController
     # convert menu to text
     # call slack api to post messsage to lunch channel
     GetMenuService.call
-    order = OrderLunchService.new
-    order.call
+    # order = OrderLunchService.new
+    # order.call
     render status: 200, json: Dish.today
   end
 

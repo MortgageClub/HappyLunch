@@ -3,25 +3,26 @@ require 'open-uri'
 
 class GetMenuService
   def self.call
-    count = 1
-
-    doc = get_html('http://giachanhcamtuyet.com.vn/index.php?m=dat-tiec&id=12&t=orders&s=1')
+    item_number = 0
     init_order
+    doc = get_html('http://giachanhcamtuyet.com.vn/index.php?m=dat-tiec&id=12&t=orders&s=1')
+
 
     get_elements(doc, "div.list_item").each do |item|
       name_element = get_element(item, "div.name")
       price_element = get_element(item, "div.price input")
+      price = price_element["value"].to_f
 
-      insert_or_update_dish(name_element.text, price_element["value"].to_f, count)
+      next unless valid_dish?(price)
+
+      item_number += 1
+      insert_or_update_dish(name_element.text, price, item_number)
     end
   end
 
   def self.insert_or_update_dish(name, price, item_number)
-    if valid_dish?(price)
-      dish = Dish.find_or_initialize_by(name: name)
-      dish.update(price: price, item_number: item_number)
-      item_number = item_number + 1
-    end
+    dish = Dish.find_or_initialize_by(name: name)
+    dish.update(price: price, item_number: item_number)
   end
 
   def self.init_order
