@@ -1,9 +1,6 @@
 namespace :slack do
   task get_menu: :environment do
     GetMenuService.call
-  end
-
-  task notify_lunch_menu: :environment do
     SlackMessageServices::SendMenu.call
   end
 
