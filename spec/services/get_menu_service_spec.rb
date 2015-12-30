@@ -2,6 +2,9 @@ require "rails_helper"
 
 describe GetMenuService do
   describe ".init_order" do
+    let(:first_dish) { FactoryGirl.create(:dish, item_number: 1) }
+    let(:second_dish) { FactoryGirl.create(:dish, item_number: 2) }
+
     context "with no today order" do
       it "creates a new order with day is today" do
         expect { described_class.init_order }.to change(Order, :count).by(1)
@@ -16,9 +19,9 @@ describe GetMenuService do
       end
     end
 
-    let!(:first_dish) { FactoryGirl.create(:dish, item_number: 1) }
-    let!(:second_dish) { FactoryGirl.create(:dish, item_number: 2) }
     it "updates all dishes with item_number nil" do
+      first_dish
+      second_dish
       described_class.init_order
       expect(Dish.where.not(item_number: nil).count).to eq(0)
     end

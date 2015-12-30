@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&link_names=1&mrkdwn=true&text=%3C!here%3E%20Menu%20for%20today%0A1.%20Tofu%20-%2012.0%20VND%0A2.%20Fruit%20-%2015.0%20VND&token=xoxp-4054076347-8547304386-17439255827-27d44a4477&username=Ramsay
+    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&link_names=1&mrkdwn=true&text=%3C!here%3E%20Menu%20for%20today%0A1.%20Tofu%20-%2012.0%20VND%0A2.%20Fruit%20-%2015.0%20VND&token&username=Ramsay
     body:
       encoding: US-ASCII
       string: ''
@@ -20,40 +20,29 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 29 Dec 2015 09:58:39 GMT
-      Expires:
-      - Mon, 26 Jul 1997 05:00:00 GMT
-      Pragma:
-      - no-cache
+      - Wed, 30 Dec 2015 04:11:26 GMT
       Server:
       - Apache
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
       X-Accepted-Oauth-Scopes:
-      - chat:write:bot,post
+      - chat:write:bot
       X-Content-Type-Options:
       - nosniff
-      X-Oauth-Scopes:
-      - identify,read,post,client
       X-Xss-Protection:
       - '0'
       Content-Length:
-      - '191'
+      - '33'
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
-      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451383119.000071","message":{"text":"<!here>
-        Menu for today\n1. Tofu - 12.0 VND\n2. Fruit - 15.0 VND","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1451383119.000071"}}'
+      encoding: UTF-8
+      string: '{"ok":false,"error":"not_authed"}'
     http_version: 
-  recorded_at: Tue, 29 Dec 2015 09:58:39 GMT
+  recorded_at: Wed, 30 Dec 2015 04:11:26 GMT
 recorded_with: VCR 3.0.1
