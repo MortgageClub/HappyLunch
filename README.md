@@ -30,7 +30,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 
  - Ex: #happylunch 1
 
-  **Several dishes** *#happylunch item-number1,{space}item-number2,{space}item-number3*.
+**Several dishes** *#happylunch item-number1,{space}item-number2,{space}item-number3*.
  - Ex: #happylunch 1, 2, 3
 
 ##How to deploy
