@@ -16,6 +16,6 @@ class SaveOrderItemService
   end
 
   def self.today_order
-    @today_order ||= Order.today.last
+    Order.today.last
   end
 end
