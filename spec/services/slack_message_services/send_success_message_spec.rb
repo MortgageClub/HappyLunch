@@ -14,7 +14,7 @@ describe SlackMessageServices::SendSuccessMessage do
 
     it "sends a success message with proper content" do
       expect(described_class.format_content).to eq(
-        "<!here> We have ordered lunch successfully. :dancer:\n**#{first_order_item.username}** #{first_order_item.dish.name}\n**#{second_order_item.username}** #{second_order_item.dish.name}"
+        "<!here> We have ordered lunch successfully. :dancer:\n*#{first_order_item.username}* #{first_order_item.dish.name}\n*#{second_order_item.username}* #{second_order_item.dish.name}"
       )
     end
   end

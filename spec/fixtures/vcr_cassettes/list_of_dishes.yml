@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&text=Menu%20for%20today%0A1.%20Tofu%2012.0k%20VND%0A2.%20Fruit%2015.0k%20VND&token=xoxp-4054076347-8547304386-17439255827-27d44a4477
+    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&link_names=1&mrkdwn=true&text=%3C!here%3E%20Menu%20for%20today%0A1.%20Tofu%20-%2012.0%20VND%0A2.%20Fruit%20-%2015.0%20VND&token=xoxp-4054076347-8547304386-17439255827-27d44a4477&username=Ramsay
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 28 Dec 2015 09:59:28 GMT
+      - Tue, 29 Dec 2015 09:58:39 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -47,13 +47,13 @@ http_interactions:
       X-Xss-Protection:
       - '0'
       Content-Length:
-      - '174'
+      - '191'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451296768.000048","message":{"text":"Menu
-        for today\n1. Tofu 12.0k VND\n2. Fruit 15.0k VND","username":"bot","type":"message","subtype":"bot_message","ts":"1451296768.000048"}}'
+      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451383119.000071","message":{"text":"<!here>
+        Menu for today\n1. Tofu - 12.0 VND\n2. Fruit - 15.0 VND","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1451383119.000071"}}'
     http_version: 
-  recorded_at: Mon, 28 Dec 2015 09:59:28 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Tue, 29 Dec 2015 09:58:39 GMT
+recorded_with: VCR 3.0.1

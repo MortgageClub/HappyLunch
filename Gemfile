@@ -27,6 +27,7 @@ gem 'capybara'
 gem 'launchy'
 
 group :development, :test do
+  gem 'shoulda-matchers'
   gem 'awesome_print'
   gem 'byebug'
   gem 'rubocop'
