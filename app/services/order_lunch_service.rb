@@ -39,10 +39,10 @@ class OrderLunchService
   end
 
   def fill_contact_info
-    crawler.find("#fullname").set("Khánh Linh")
-    crawler.find("#address").set("25 Nguyễn Hữu Cầu, P. Cầu Kho, Q.1")
-    crawler.find("#tel").set("017893561332")
-    crawler.find("#email").set("ly@gardenorganic.co")
+    crawler.find("#fullname").set("Diệu Linh")
+    crawler.find("#address").set("93bis Nguyễn Văn Thủ, P. Đa Kao, Q.1")
+    crawler.find("#tel").set("0986088803")
+    crawler.find("#email").set("linh@mortgageclub.co")
   end
 
   def skip_captcha
@@ -66,8 +66,7 @@ class OrderLunchService
 
   def set_up_crawler
     Capybara.register_driver :poltergeist do |app|
-      Capybara::Poltergeist::Driver.new(app, js_errors: false, timeout: 60,
-        inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes'])
+      Capybara::Poltergeist::Driver.new(app, js_errors: false, timeout: 60, inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes'])
     end
     Capybara.ignore_hidden_elements = false
     Capybara.default_max_wait_time = 60
@@ -80,7 +79,8 @@ class OrderLunchService
   end
 
   def check_status
-    success_message = crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi! Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
+    success_message = crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi!
+      Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
     success_message ? @result = true : @result = false
   end
 end

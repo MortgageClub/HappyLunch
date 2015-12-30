@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&link_names=1&mrkdwn=true&text=%3C!here%3E%20We%20have%20ordered%20lunch%20successfully.%20:dancer:%0A*cuongvu*%20Tofu%0A*tangnv*%20Fruit&token=xoxp-4054076347-8547304386-17439255827-27d44a4477&username=Ramsay
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - referrer no-referrer;
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Dec 2015 02:09:36 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - chat:write:bot,post
+      X-Content-Type-Options:
+      - nosniff
+      X-Oauth-Scopes:
+      - identify,read,post,client
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '208'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451441376.000004","message":{"text":"<!here>
+        We have ordered lunch successfully. :dancer:\n*cuongvu* Tofu\n*tangnv* Fruit","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1451441376.000004"}}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 02:09:36 GMT
+recorded_with: VCR 3.0.1

@@ -12,10 +12,10 @@ namespace :slack do
   end
 
   task order_lunch: :environment do
-    OrderLunchService.new.call
-  end
-
-  task send_success_message: :environment do
-    SlackMessageServices::SendSuccessMessage.call
+    if OrderLunchService.new.call
+      SlackMessageServices::SendSuccessMessage.call
+    else
+      SlackMessageServices::SendErrorMessage.call
+    end
   end
 end

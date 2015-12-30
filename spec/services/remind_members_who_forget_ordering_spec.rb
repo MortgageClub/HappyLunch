@@ -1,12 +1,11 @@
 require "rails_helper"
 
 describe SlackMessageServices::RemindMembersWhoForgetOrdering do
-
   describe ".call" do
     let!(:today_order) { FactoryGirl.create(:order) }
     let!(:tofu) { FactoryGirl.create(:dish, name: "Tofu", price: 12, item_number: 1) }
     let!(:fruit) { FactoryGirl.create(:dish, name: "Fruit", price: 15, item_number: 2) }
-    let!(:order_item1) { FactoryGirl.create(:order_item, order: today_order, username: "tangnv", dish: tofu)}
+    let!(:order_item1) { FactoryGirl.create(:order_item, order: today_order, username: "tangnv", dish: tofu) }
 
     it "Sends notice message to users have not ordered" do
       VCR.use_cassette("users_have_not_order") do

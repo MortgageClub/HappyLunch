@@ -19,11 +19,15 @@ describe SaveOrderItemService do
           "timestamp" => "1451291717.000030",
           "user_id" => "U08G38YBC",
           "user_name" => "cuongvu",
-          "text" => "#happylunch 1",
+          "text" => "#happylunch #{first_dish.item_number}",
           "trigger_word" => "#happylunch",
           "controller" => "lunch",
           "action" => "order"
         }
+      end
+
+      it "creates a new order item" do
+        expect { described_class.call(@info) }.to change { OrderItem.count }.by(1)
       end
     end
 
@@ -46,13 +50,33 @@ describe SaveOrderItemService do
         }
       end
 
-      it "creates records of OrderItem" do
+      it "creates new order items" do
         expect { described_class.call(@info) }.to change { OrderItem.count }.by(3)
       end
     end
   end
 
   context "with non-existing items" do
-    it "does nothing"
+    before(:each) do
+      @info = {
+        "token" => "sk15XN8zJl9WodWMHlPWJXuw",
+        "team_id" => "T041L28A7",
+        "team_domain" => "mortgageclub",
+        "service_id" => "17449929782",
+        "channel_id" => "C08MCMJ8K",
+        "channel_name" => "lunch",
+        "timestamp" => "1451291717.000030",
+        "user_id" => "U08G38YBC",
+        "user_name" => "cuongvu",
+        "text" => "#happylunch faker-item",
+        "trigger_word" => "#happylunch",
+        "controller" => "lunch",
+        "action" => "order"
+      }
+    end
+
+    it "does not save any dishes" do
+      expect { described_class.call(@info) }.not_to change { OrderItem.count }
+    end
   end
 end
