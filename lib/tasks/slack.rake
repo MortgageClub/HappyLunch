@@ -14,6 +14,8 @@ namespace :slack do
   task order_lunch: :environment do
     if OrderLunchService.new.call
       SlackMessageServices::SendSuccessMessage.call
+    else
+      SlackMessageServices::SendErrorMessage.call
     end
   end
 end
