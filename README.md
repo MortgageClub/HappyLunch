@@ -9,7 +9,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 - Add more lunch providers to the application
 
 ##How it works
-![workflow](http://s30.postimg.org/gt3vrs5zl/happy_lunch_workflow_1.png)
+![workflow](http://s2.postimg.org/o0ry898mx/updated_31_12_happy_lunch_workflow.png)
 
 ##Usage
 ### Menu
@@ -45,17 +45,17 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 
  ```
  SLACK_TOKEN=xoxp-your-authentication-token-XXYY
-```
+ ```
 
 - Set up a scheduler to call below rake tasks. You can choose your ideal time.
 
-``` ruby
-# 8:30 AM get menu from GiaChanhCamTuyet & send menu to Slack
-rake slack:get_menu
-
-# 9:00 AM remind members who haven't ordered lunch
-rake slack:remind_members_order_lunch
-
-# 9:30 AM order lunch automatically
-rake slack:order_lunch
-```
+ ``` ruby
+ # 8:30 AM get menu from GiaChanhCamTuyet & send menu to Slack
+ rake slack:get_menu
+ 
+ # 9:00 AM remind members who haven't ordered lunch
+ rake slack:remind_members_order_lunch
+ 
+ # 9:30 AM order lunch automatically
+ rake slack:order_lunch
+ ```
