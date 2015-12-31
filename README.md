@@ -13,7 +13,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 
 ##Usage
 ### Menu
- - Slack is got menu having format likes this:
+ - Slack channel will receive today's menu in this format:
 
 >   1. Bò xốt tiêu xanh - bánh mì - 33000.0 VND
   2. Ba chỉ xào ruốc sả - 29000.0 VND
