@@ -33,7 +33,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 **Several dishes** *#happylunch item-number1,{space}item-number2,{space}item-number3*.
  - Ex: #happylunch 1, 2, 3
 
-##How to deploy
+##Install
 - Implement Slack's webhook
  - Implement [Slack's Incoming Webhook](https://api.slack.com/incoming-webhooks).
  - Implement [Slack's Outgoing Webhooks](https://api.slack.com/outgoing-webhooks).
@@ -41,7 +41,9 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
  - Outgoing's URL: http://your-domain/lunch/order
  - Notice: your channel you choose will be a place members place orders.
 
-- Set *Slack authentication token* to environment variable. [See more](https://api.slack.com/methods/chat.postMessage)
+- Deploy the Rails app to a hosting provider.
+
+- Set *Slack's authentication token* to environment variable. [See more](https://api.slack.com/methods/chat.postMessage)
 
  ```
  SLACK_TOKEN=xoxp-your-authentication-token-XXYY
@@ -52,10 +54,23 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
  ``` ruby
  # 8:30 AM get menu from GiaChanhCamTuyet & send menu to Slack
  rake slack:get_menu
- 
+
  # 9:00 AM remind members who haven't ordered lunch
  rake slack:remind_members_order_lunch
- 
+
  # 9:30 AM order lunch automatically
  rake slack:order_lunch
  ```
+
+## Demo
+See [demo.html](demo.html).
+
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Thank you, [contributors]!
+
+[contributors]: https://github.com/mortgageclub/happylunch/graphs/contributors
+
+## LICENSE
+MIT License. Copyright 2015-2016 MortgageClub.
