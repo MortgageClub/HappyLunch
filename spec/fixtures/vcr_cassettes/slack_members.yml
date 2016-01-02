@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://slack.com/api/users.list?presence=true&pretty=1&token
+    uri: https://slack.com/api/users.list?presence=true&pretty=1&token=xoxp-4054076347-8547304386-17439255827-27d44a4477
     body:
       encoding: US-ASCII
       string: ''
@@ -20,33 +20,501 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 30 Dec 2015 04:11:23 GMT
+      - Sat, 02 Jan 2016 02:51:23 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
       Server:
       - Apache
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
       X-Accepted-Oauth-Scopes:
-      - users:read
+      - users:read,read
       X-Content-Type-Options:
       - nosniff
+      X-Oauth-Scopes:
+      - identify,read,post,client
       X-Xss-Protection:
       - '0'
       Content-Length:
-      - '46'
+      - '2802'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |-
         {
-            "ok": false,
-            "error": "not_authed"
+            "ok": true,
+            "members": [
+                {
+                    "id": "U041L2M1H",
+                    "team_id": "T041L28A7",
+                    "name": "billy",
+                    "deleted": false,
+                    "status": null,
+                    "color": "4bbe2e",
+                    "real_name": "Billy Tran",
+                    "tz": "America\/Los_Angeles",
+                    "tz_label": "Pacific Standard Time",
+                    "tz_offset": -28800,
+                    "profile": {
+                        "first_name": "Billy",
+                        "last_name": "Tran",
+                        "image_24": "https:\/\/avatars.slack-edge.com\/2015-03-17\/4083496444_8e5844d70232b7899d99_24.jpg",
+                        "image_32": "https:\/\/avatars.slack-edge.com\/2015-03-17\/4083496444_8e5844d70232b7899d99_32.jpg",
+                        "image_48": "https:\/\/avatars.slack-edge.com\/2015-03-17\/4083496444_8e5844d70232b7899d99_48.jpg",
+                        "image_72": "https:\/\/avatars.slack-edge.com\/2015-03-17\/4083496444_8e5844d70232b7899d99_72.jpg",
+                        "image_192": "https:\/\/avatars.slack-edge.com\/2015-03-17\/4083496444_8e5844d70232b7899d99_192.jpg",
+                        "image_original": "https:\/\/avatars.slack-edge.com\/2015-03-17\/4083496444_8e5844d70232b7899d99_original.jpg",
+                        "skype": "billytran1222",
+                        "phone": "6507877799",
+                        "title": "",
+                        "real_name": "Billy Tran",
+                        "real_name_normalized": "Billy Tran",
+                        "email": "billy@mortgageclub.co"
+                    },
+                    "is_admin": true,
+                    "is_owner": true,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "presence": "active"
+                },
+                {
+                    "id": "U08G38YBC",
+                    "team_id": "T041L28A7",
+                    "name": "cuongvu",
+                    "deleted": false,
+                    "status": null,
+                    "color": "e96699",
+                    "real_name": "Cuong Vu",
+                    "tz": "Asia\/Novosibirsk",
+                    "tz_label": "Novosibirsk Time",
+                    "tz_offset": 21600,
+                    "profile": {
+                        "first_name": "Cuong",
+                        "last_name": "Vu",
+                        "real_name": "Cuong Vu",
+                        "real_name_normalized": "Cuong Vu",
+                        "email": "cuongvu0103@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/d5c61e9157582db7e8900fb166b863b3.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0015-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/d5c61e9157582db7e8900fb166b863b3.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0015-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/d5c61e9157582db7e8900fb166b863b3.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0015-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/d5c61e9157582db7e8900fb166b863b3.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0015-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/d5c61e9157582db7e8900fb166b863b3.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0015-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/d5c61e9157582db7e8900fb166b863b3.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0015-512.png"
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "has_2fa": false,
+                    "presence": "active"
+                },
+                {
+                    "id": "U08HRPQJ3",
+                    "team_id": "T041L28A7",
+                    "name": "geenguyen",
+                    "deleted": true,
+                    "profile": {
+                        "first_name": "Gee",
+                        "last_name": "Nguyen",
+                        "image_24": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_24.jpg",
+                        "image_32": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_32.jpg",
+                        "image_48": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_48.jpg",
+                        "image_72": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_72.jpg",
+                        "image_192": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_192.jpg",
+                        "image_512": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_512.jpg",
+                        "image_1024": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_512.jpg",
+                        "image_original": "https:\/\/avatars.slack-edge.com\/2015-11-06\/14024969872_e7292f7442912271e7e0_original.jpg",
+                        "real_name": "Gee Nguyen",
+                        "real_name_normalized": "Gee Nguyen",
+                        "email": "geenguyen93@gmail.com"
+                    },
+                    "presence": "away"
+                },
+                {
+                    "id": "U04TNG32X",
+                    "team_id": "T041L28A7",
+                    "name": "hoang",
+                    "deleted": true,
+                    "profile": {
+                        "first_name": "Hoang",
+                        "last_name": "Le",
+                        "title": "",
+                        "skype": "",
+                        "phone": "",
+                        "real_name": "Hoang Le",
+                        "real_name_normalized": "Hoang Le",
+                        "email": "lehoang1417@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/8b72a7816d463824c297bc1ee1b6818b.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F0180%2Fimg%2Favatars%2Fava_0025-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/8b72a7816d463824c297bc1ee1b6818b.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0025-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/8b72a7816d463824c297bc1ee1b6818b.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0025-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/8b72a7816d463824c297bc1ee1b6818b.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0025-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/8b72a7816d463824c297bc1ee1b6818b.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0025-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/8b72a7816d463824c297bc1ee1b6818b.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0025-512.png"
+                    },
+                    "presence": "away"
+                },
+                {
+                    "id": "U0APWJV52",
+                    "team_id": "T041L28A7",
+                    "name": "hulk",
+                    "deleted": true,
+                    "profile": {
+                        "bot_id": "B0APZA9B9",
+                        "image_24": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_24.jpg",
+                        "image_32": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_32.jpg",
+                        "image_48": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_48.jpg",
+                        "image_72": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_72.jpg",
+                        "image_192": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_192.jpg",
+                        "image_512": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_512.jpg",
+                        "image_1024": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_512.jpg",
+                        "image_original": "https:\/\/avatars.slack-edge.com\/2015-09-16\/10812627203_98b59e8e0880e9b7085d_original.jpg",
+                        "real_name": "",
+                        "real_name_normalized": ""
+                    },
+                    "is_bot": true,
+                    "presence": "away"
+                },
+                {
+                    "id": "U0HD1FB3N",
+                    "team_id": "T041L28A7",
+                    "name": "jamesnguyenvnn",
+                    "deleted": false,
+                    "status": null,
+                    "color": "d58247",
+                    "real_name": "Binh Nguyen",
+                    "tz": "Asia\/Novosibirsk",
+                    "tz_label": "Novosibirsk Time",
+                    "tz_offset": 21600,
+                    "profile": {
+                        "first_name": "Binh",
+                        "last_name": "Nguyen",
+                        "avatar_hash": "g280da6a1148",
+                        "real_name": "Binh Nguyen",
+                        "real_name_normalized": "Binh Nguyen",
+                        "email": "james.nguyen.vnn@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/280da6a1148ba2b0d31c3e08d7deadb4.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0024-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/280da6a1148ba2b0d31c3e08d7deadb4.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0024-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/280da6a1148ba2b0d31c3e08d7deadb4.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0024-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/280da6a1148ba2b0d31c3e08d7deadb4.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0024-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/280da6a1148ba2b0d31c3e08d7deadb4.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0024-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/280da6a1148ba2b0d31c3e08d7deadb4.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0024-512.png"
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "presence": "active"
+                },
+                {
+                    "id": "U0FFUKU1M",
+                    "team_id": "T041L28A7",
+                    "name": "linhvn09",
+                    "deleted": false,
+                    "status": null,
+                    "color": "99a949",
+                    "real_name": "Linh Nguyen",
+                    "tz": "Asia\/Novosibirsk",
+                    "tz_label": "Novosibirsk Time",
+                    "tz_offset": 21600,
+                    "profile": {
+                        "first_name": "Linh",
+                        "last_name": "Nguyen",
+                        "avatar_hash": "g5fe8c14c0d2",
+                        "real_name": "Linh Nguyen",
+                        "real_name_normalized": "Linh Nguyen",
+                        "email": "linhvn09@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/5fe8c14c0d29e8c34cfbb3820599d311.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0000-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/5fe8c14c0d29e8c34cfbb3820599d311.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0000-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/5fe8c14c0d29e8c34cfbb3820599d311.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0000-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/5fe8c14c0d29e8c34cfbb3820599d311.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0000-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/5fe8c14c0d29e8c34cfbb3820599d311.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0000-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/5fe8c14c0d29e8c34cfbb3820599d311.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0000-512.png"
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "presence": "away"
+                },
+                {
+                    "id": "U0GH9RHT8",
+                    "team_id": "T041L28A7",
+                    "name": "lydang",
+                    "deleted": false,
+                    "status": null,
+                    "color": "4cc091",
+                    "real_name": "Ly Dang",
+                    "tz": "Asia\/Novosibirsk",
+                    "tz_label": "Novosibirsk Time",
+                    "tz_offset": 21600,
+                    "profile": {
+                        "first_name": "Ly",
+                        "last_name": "Dang",
+                        "avatar_hash": "67d2e1c12d6f",
+                        "image_24": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_24.png",
+                        "image_32": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_32.png",
+                        "image_48": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_48.png",
+                        "image_72": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_72.png",
+                        "image_192": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_192.png",
+                        "image_512": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_512.png",
+                        "image_1024": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_512.png",
+                        "image_original": "https:\/\/avatars.slack-edge.com\/2015-12-15\/16676154852_67d2e1c12d6f9fd1911f_original.png",
+                        "title": "Assistant",
+                        "phone": "0979900877",
+                        "skype": "khanhlydang94",
+                        "real_name": "Ly Dang",
+                        "real_name_normalized": "Ly Dang",
+                        "email": "khanhly050594@gmail.com"
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "presence": "away"
+                },
+                {
+                    "id": "U041L28AH",
+                    "team_id": "T041L28A7",
+                    "name": "mike",
+                    "deleted": false,
+                    "status": null,
+                    "color": "9f69e7",
+                    "real_name": "Mike Fitzgerald",
+                    "tz": "America\/Los_Angeles",
+                    "tz_label": "Pacific Standard Time",
+                    "tz_offset": -28800,
+                    "profile": {
+                        "first_name": "Mike",
+                        "last_name": "Fitzgerald",
+                        "phone": "203-907-8813",
+                        "real_name": "Mike Fitzgerald",
+                        "real_name_normalized": "Mike Fitzgerald",
+                        "email": "riceballs621@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/8986186625c640541cfc539fbdf607c1.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0001-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/8986186625c640541cfc539fbdf607c1.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0001-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/8986186625c640541cfc539fbdf607c1.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F0180%2Fimg%2Favatars%2Fava_0001-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/8986186625c640541cfc539fbdf607c1.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F3654%2Fimg%2Favatars%2Fava_0001-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/8986186625c640541cfc539fbdf607c1.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0001-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/8986186625c640541cfc539fbdf607c1.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0001-512.png"
+                    },
+                    "is_admin": true,
+                    "is_owner": true,
+                    "is_primary_owner": true,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "presence": "away"
+                },
+                {
+                    "id": "U076JTAF9",
+                    "team_id": "T041L28A7",
+                    "name": "nguyen7thai",
+                    "deleted": true,
+                    "profile": {
+                        "first_name": "Thai",
+                        "last_name": "Nguyen",
+                        "real_name": "Thai Nguyen",
+                        "real_name_normalized": "Thai Nguyen",
+                        "email": "nguyen7thai@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/c8905ff40555e70320ec87807532cfff.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0016-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/c8905ff40555e70320ec87807532cfff.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0016-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/c8905ff40555e70320ec87807532cfff.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0016-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/c8905ff40555e70320ec87807532cfff.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0016-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/c8905ff40555e70320ec87807532cfff.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0016-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/c8905ff40555e70320ec87807532cfff.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0016-512.png"
+                    },
+                    "presence": "away"
+                },
+                {
+                    "id": "U0AQ3SM42",
+                    "team_id": "T041L28A7",
+                    "name": "pitt",
+                    "deleted": false,
+                    "status": null,
+                    "color": "2b6836",
+                    "real_name": "",
+                    "tz": null,
+                    "tz_label": "Pacific Standard Time",
+                    "tz_offset": -28800,
+                    "profile": {
+                        "bot_id": "B0APZ1Z7G",
+                        "image_24": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_24.jpg",
+                        "image_32": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_32.jpg",
+                        "image_48": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_48.jpg",
+                        "image_72": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_72.jpg",
+                        "image_192": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_192.jpg",
+                        "image_512": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_192.jpg",
+                        "image_1024": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_192.jpg",
+                        "image_original": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_original.jpg",
+                        "real_name": "",
+                        "real_name_normalized": ""
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": true,
+                    "presence": "active"
+                },
+                {
+                    "id": "U0GHA5GQY",
+                    "team_id": "T041L28A7",
+                    "name": "tangnv",
+                    "deleted": false,
+                    "status": null,
+                    "color": "9b3b45",
+                    "real_name": "Tang Nguyen",
+                    "tz": "Asia\/Novosibirsk",
+                    "tz_label": "Novosibirsk Time",
+                    "tz_offset": 21600,
+                    "profile": {
+                        "first_name": "Tang",
+                        "last_name": "Nguyen",
+                        "avatar_hash": "7af7fe8bded5",
+                        "title": "",
+                        "phone": "1693061954",
+                        "skype": "nvtang.khtn@gmail.com",
+                        "image_24": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_24.jpg",
+                        "image_32": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_32.jpg",
+                        "image_48": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_48.jpg",
+                        "image_72": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_72.jpg",
+                        "image_192": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_192.jpg",
+                        "image_512": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_192.jpg",
+                        "image_1024": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_192.jpg",
+                        "image_original": "https:\/\/avatars.slack-edge.com\/2015-12-14\/16589136163_7af7fe8bded5abed2ca8_original.jpg",
+                        "real_name": "Tang Nguyen",
+                        "real_name_normalized": "Tang Nguyen",
+                        "email": "tang@mortgageclub.co"
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false,
+                    "presence": "away"
+                },
+                {
+                    "id": "U09G432S2",
+                    "team_id": "T041L28A7",
+                    "name": "thanhcuong1990",
+                    "deleted": true,
+                    "profile": {
+                        "first_name": "Cuong",
+                        "last_name": "Lam",
+                        "title": "Developer",
+                        "skype": "thanhcuong1990",
+                        "phone": "",
+                        "real_name": "Cuong Lam",
+                        "real_name_normalized": "Cuong Lam",
+                        "email": "thanhcuong1990@gmail.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/3e51ef89b463680a71366f8c4b2956df.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0018-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/3e51ef89b463680a71366f8c4b2956df.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0018-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/3e51ef89b463680a71366f8c4b2956df.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0018-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/3e51ef89b463680a71366f8c4b2956df.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F3654%2Fimg%2Favatars%2Fava_0018-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/3e51ef89b463680a71366f8c4b2956df.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0018-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/3e51ef89b463680a71366f8c4b2956df.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0018-512.png"
+                    },
+                    "presence": "away"
+                },
+                {
+                    "id": "U0FJB8JRH",
+                    "team_id": "T041L28A7",
+                    "name": "tienpham",
+                    "deleted": true,
+                    "profile": {
+                        "first_name": "Tien",
+                        "last_name": "Pham",
+                        "avatar_hash": "g9b1cfe651a0",
+                        "real_name": "Tien Pham",
+                        "real_name_normalized": "Tien Pham",
+                        "email": "tien@mortgageclub.co",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/9b1cfe651a0d7720067eb017b80a9dee.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0023-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/9b1cfe651a0d7720067eb017b80a9dee.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0023-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/9b1cfe651a0d7720067eb017b80a9dee.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0023-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/9b1cfe651a0d7720067eb017b80a9dee.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F3654%2Fimg%2Favatars%2Fava_0023-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/9b1cfe651a0d7720067eb017b80a9dee.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0023-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/9b1cfe651a0d7720067eb017b80a9dee.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0023-512.png"
+                    },
+                    "presence": "away"
+                },
+                {
+                    "id": "U041NT7QY",
+                    "team_id": "T041L28A7",
+                    "name": "tuan",
+                    "deleted": true,
+                    "profile": {
+                        "real_name": "",
+                        "real_name_normalized": "",
+                        "email": "tuan@homieo.com",
+                        "image_24": "https:\/\/secure.gravatar.com\/avatar\/9ab901d08e84e1b98ba9f72862632826.jpg?s=24&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0018-24.png",
+                        "image_32": "https:\/\/secure.gravatar.com\/avatar\/9ab901d08e84e1b98ba9f72862632826.jpg?s=32&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0018-32.png",
+                        "image_48": "https:\/\/secure.gravatar.com\/avatar\/9ab901d08e84e1b98ba9f72862632826.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0018-48.png",
+                        "image_72": "https:\/\/secure.gravatar.com\/avatar\/9ab901d08e84e1b98ba9f72862632826.jpg?s=72&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F3654%2Fimg%2Favatars%2Fava_0018-72.png",
+                        "image_192": "https:\/\/secure.gravatar.com\/avatar\/9ab901d08e84e1b98ba9f72862632826.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0018-192.png",
+                        "image_512": "https:\/\/secure.gravatar.com\/avatar\/9ab901d08e84e1b98ba9f72862632826.jpg?s=512&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F7fa9%2Fimg%2Favatars%2Fava_0018-512.png"
+                    },
+                    "presence": "away"
+                },
+                {
+                    "id": "USLACKBOT",
+                    "team_id": "T041L28A7",
+                    "name": "slackbot",
+                    "deleted": false,
+                    "status": null,
+                    "color": "757575",
+                    "real_name": "slackbot",
+                    "tz": null,
+                    "tz_label": "Pacific Standard Time",
+                    "tz_offset": -28800,
+                    "profile": {
+                        "first_name": "slackbot",
+                        "last_name": "",
+                        "image_24": "https:\/\/slack.global.ssl.fastly.net\/0180\/img\/slackbot_24.png",
+                        "image_32": "https:\/\/slack.global.ssl.fastly.net\/66f9\/img\/slackbot_32.png",
+                        "image_48": "https:\/\/slack.global.ssl.fastly.net\/66f9\/img\/slackbot_48.png",
+                        "image_72": "https:\/\/slack.global.ssl.fastly.net\/0180\/img\/slackbot_72.png",
+                        "image_192": "https:\/\/slack.global.ssl.fastly.net\/66f9\/img\/slackbot_192.png",
+                        "image_512": "https:\/\/slack.global.ssl.fastly.net\/7fa9\/img\/slackbot_512.png",
+                        "avatar_hash": "sv1444671949",
+                        "real_name": "slackbot",
+                        "real_name_normalized": "slackbot",
+                        "email": null,
+                        "fields": null
+                    },
+                    "is_admin": false,
+                    "is_owner": false,
+                    "is_primary_owner": false,
+                    "is_restricted": false,
+                    "is_ultra_restricted": false,
+                    "is_bot": false
+                }
+            ],
+            "cache_ts": 1451703083
         }
     http_version: 
-  recorded_at: Wed, 30 Dec 2015 04:11:24 GMT
+  recorded_at: Sat, 02 Jan 2016 02:51:23 GMT
 recorded_with: VCR 3.0.1
