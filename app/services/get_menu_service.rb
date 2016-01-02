@@ -20,7 +20,9 @@ class GetMenuService
 
   def self.insert_or_update_dish(name, price, item_number)
     dish = Dish.find_or_initialize_by(name: name)
-    dish.update(price: price, item_number: item_number)
+    dish.price = price
+    dish.item_number = item_number
+    dish.save
   end
 
   def self.init_order

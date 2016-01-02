@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 30 Dec 2015 02:09:36 GMT
+      - Sat, 02 Jan 2016 02:56:41 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -47,13 +47,13 @@ http_interactions:
       X-Xss-Protection:
       - '0'
       Content-Length:
-      - '208'
+      - '207'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451441376.000004","message":{"text":"<!here>
-        We have ordered lunch successfully. :dancer:\n*cuongvu* Tofu\n*tangnv* Fruit","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1451441376.000004"}}'
+      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451703401.000008","message":{"text":"<!here>
+        We have ordered lunch successfully. :dancer:\n*cuongvu* Tofu\n*tangnv* Fruit","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1451703401.000008"}}'
     http_version: 
-  recorded_at: Wed, 30 Dec 2015 02:09:36 GMT
+  recorded_at: Sat, 02 Jan 2016 02:56:42 GMT
 recorded_with: VCR 3.0.1
