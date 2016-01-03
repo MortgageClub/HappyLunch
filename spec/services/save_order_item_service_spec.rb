@@ -10,14 +10,14 @@ describe SaveOrderItemService do
     context "when member orders one dish" do
       before(:each) do
         @info = {
-          "token" => "sk15XN8zJl9WodWMHlPWJXuw",
-          "team_id" => "T041L28A7",
+          "token" => ENV["OUTGOING_TOKEN"],
+          "team_id" => "YOUR_SLACK_TEAM_ID",
           "team_domain" => "mortgageclub",
-          "service_id" => "17449929782",
-          "channel_id" => "C08MCMJ8K",
+          "service_id" => "SLACK_SERVICE_ID",
+          "channel_id" => "YOUR_SLACK_CHANNEL_ID",
           "channel_name" => "lunch",
           "timestamp" => "1451291717.000030",
-          "user_id" => "U08G38YBC",
+          "user_id" => "SLACK_USER_ID",
           "user_name" => "cuongvu",
           "text" => "#happylunch #{first_dish.item_number}",
           "trigger_word" => "#happylunch",
@@ -34,14 +34,14 @@ describe SaveOrderItemService do
     context "when member orders several dishes" do
       before(:each) do
         @info = {
-          "token" => "ak15XN8zJl9WodWMHlPWJXvz",
-          "team_id" => "T041L28B9",
+          "token" => ENV["OUTGOING_TOKEN"],
+          "team_id" => "YOUR_SLACK_TEAM_ID",
           "team_domain" => "mortgageclub",
-          "service_id" => "17449929782",
-          "channel_id" => "C08MCMJ8K",
+          "service_id" => "SLACK_SERVICE_ID",
+          "channel_id" => "YOUR_SLACK_CHANNEL_ID",
           "channel_name" => "lunch",
           "timestamp" => "1451291717.000030",
-          "user_id" => "U09Z78YBC",
+          "user_id" => "SLACK_USER_ID",
           "user_name" => "cuongvu",
           "text" => "#happylunch #{first_dish.item_number}, #{second_dish.item_number}, #{third_dish.item_number}",
           "trigger_word" => "#happylunch",
@@ -59,14 +59,14 @@ describe SaveOrderItemService do
   context "with non-existing items" do
     before(:each) do
       @info = {
-        "token" => "sk15XN8zJl9WodWMHlPWJXuw",
-        "team_id" => "T041L28A7",
+        "token" => ENV["OUTGOING_TOKEN"],
+        "team_id" => "YOUR_SLACK_TEAM_ID",
         "team_domain" => "mortgageclub",
-        "service_id" => "17449929782",
-        "channel_id" => "C08MCMJ8K",
+        "service_id" => "SLACK_SERVICE_ID",
+        "channel_id" => "YOUR_SLACK_CHANNEL_ID",
         "channel_name" => "lunch",
         "timestamp" => "1451291717.000030",
-        "user_id" => "U08G38YBC",
+        "user_id" => "SLACK_USER_ID",
         "user_name" => "cuongvu",
         "text" => "#happylunch faker-item",
         "trigger_word" => "#happylunch",
