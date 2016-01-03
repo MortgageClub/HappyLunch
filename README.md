@@ -41,9 +41,13 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 
 - Deploy the Rails app to a hosting provider.
 
-- Set [Slack's authentication token](https://api.slack.com/methods/chat.postMessage) and [Slack's outgoing token](https://api.slack.com/outgoing-webhooks) to environment variables.
+- Set contact information, [Slack's authentication token](https://api.slack.com/methods/chat.postMessage) and [Slack's outgoing token](https://api.slack.com/outgoing-webhooks) to environment variables.
 
  ```
+ FULLNAME='Nguyen Van A'
+ ADDRESS='93bis Nguyen Văn Thu, P. Da Kao, Q.1'
+ TELEPHONE=097990xxyy
+ EMAIL=nguyenvana@gmail.com
  SLACK_TOKEN=xoxp-your-authentication-token-XXYY
  OUTGOING_TOKEN=sk15-your-outgoing-token-XXYY
  ```
