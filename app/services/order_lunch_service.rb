@@ -38,12 +38,14 @@ class OrderLunchService
     end
   end
 
+  # rubocop:disable AbcSize
   def fill_contact_info
-    crawler.find("#fullname").set("Khánh Ly")
-    crawler.find("#address").set("93bis Nguyễn Văn Thủ, P. Đa Kao, Q.1")
-    crawler.find("#tel").set("0979900877")
-    crawler.find("#email").set("khanhly050594@gmail.com")
+    crawler.find("#fullname").set(ENV["FULLNAME"])
+    crawler.find("#address").set(ENV["ADDRESS"])
+    crawler.find("#tel").set(ENV["TELEPHONE"])
+    crawler.find("#email").set(ENV["EMAIL"])
   end
+  # rubocop:enable AbcSize
 
   def skip_captcha
     crawler.find("#captcha").set("6BA2C")
