@@ -4,9 +4,7 @@
 
 At MortgageClub, we have free catered lunch everyday. Previously, (1) our assistant would ask us what we want for lunch, (2) we then go to the restaurant website (giachanhcamtuyet, for example), (3) choose what we want to eat, (4) tell the assistant, and finally (5) she would place an order on the restaurant website.
 
-We thought that we could create a Slackbot to automate all of these steps. So our team spent 1 day to code it up as a year-end fun project. We thought it might be useful to other engineering teams in Vietnam as well so we've made it public. Here are a few features that you can add to this Slackbot:
-- Ask for delivery information: name, address, phone number... instead of hardcoding it
-- Add more lunch providers to the application
+We thought that we could create a Slackbot to automate all of these steps. So our team spent 2 days to code it up as a year-end fun project. We thought it might be useful to other engineering teams in Vietnam as well so we've made it public.
 
 ##How it works
 ![workflow](http://s2.postimg.org/o0ry898mx/updated_31_12_happy_lunch_workflow.png)
@@ -37,16 +35,17 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
 - Implement Slack's webhook
  - Implement [Slack's Incoming Webhook](https://api.slack.com/incoming-webhooks).
  - Implement [Slack's Outgoing Webhooks](https://api.slack.com/outgoing-webhooks).
- - Outgoing's Trigger Word: #happylunch (or whatever you like)
+ - Outgoing's Trigger Word: #happylunch (or whatever you like).
  - Outgoing's URL: http://your-domain/lunch/order
  - Notice: your channel you choose will be a place members place orders.
 
 - Deploy the Rails app to a hosting provider.
 
-- Set *Slack's authentication token* to environment variable. [See more](https://api.slack.com/methods/chat.postMessage)
+- Set [Slack's authentication token](https://api.slack.com/methods/chat.postMessage) and [Slack's outgoing token](https://api.slack.com/outgoing-webhooks) to environment variables.
 
  ```
  SLACK_TOKEN=xoxp-your-authentication-token-XXYY
+ OUTGOING_TOKEN=sk15-your-outgoing-token-XXYY
  ```
 
 - Set up a scheduler to call below rake tasks. You can choose your ideal time.
@@ -63,7 +62,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
  ```
 
 ## Demo
-See [demo.html](demo.html).
+See demo images at demo.html
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md).

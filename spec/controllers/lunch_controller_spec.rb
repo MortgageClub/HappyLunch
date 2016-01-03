@@ -27,7 +27,7 @@ describe LunchController do
       it "calls SaveOrderItemService" do
         expect(SaveOrderItemService).to receive(:call)
 
-        post :order, token: "sk15XN8zJl9WodWMHlPWJXuw",
+        post :order, token: ENV["OUTGOING_TOKEN"],
                      text: "#happylunch 1",
                      user_name: "cuongvu"
       end

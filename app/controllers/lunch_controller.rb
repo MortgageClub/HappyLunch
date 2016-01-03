@@ -1,6 +1,5 @@
 class LunchController < ApplicationController
   before_action :check_request, only: :order
-  VALID_TOKEN = "sk15XN8zJl9WodWMHlPWJXuw".freeze
 
   def menu
     render status: 200, json: Dish.today
@@ -14,6 +13,6 @@ class LunchController < ApplicationController
   private
 
   def check_request
-    return render json: {error: "No access permission"}, status: 401 if params["token"] != VALID_TOKEN
+    return render json: {error: "No access permission"}, status: 401 if params["token"] != ENV["OUTGOING_TOKEN"]
   end
 end
