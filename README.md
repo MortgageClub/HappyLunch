@@ -1,5 +1,7 @@
 ![logo](http://www.mortgageclub.io/assets/mortgageclubLOGO-5d49c4f9105893724104ce9b480ce03ebcf9f034b6e938da552c659903746da4.png)
 
+[![Circle CI](https://circleci.com/gh/MortgageClub/HappyLunch/tree/master.svg?style=svg)](https://circleci.com/gh/MortgageClub/HappyLunch/tree/master)
+
 ##Background
 
 At MortgageClub, we have free catered lunch everyday. Previously, (1) our assistant would ask us what we want for lunch, (2) we then go to the restaurant website (giachanhcamtuyet, for example), (3) choose what we want to eat, (4) tell the assistant, and finally (5) she would place an order on the restaurant website.
