@@ -1,10 +1,6 @@
 class LunchController < ApplicationController
   before_action :check_request, only: :order
 
-  def menu
-    render status: 200, json: Dish.today
-  end
-
   def order
     SaveOrderItemService.call(params)
     render status: 200, json: "order"
