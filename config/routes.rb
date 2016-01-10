@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :lunch do
-    collection do
-      post :order
-    end
-  end
+  post "orders", to: "orders#create"
+  resources :orders
 end
