@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&link_names=1&mrkdwn=true&text=%3C!here%3E%20We%20have%20ordered%20lunch%20successfully.%20:dancer:%0A*cuongvu*%20Tofu%0A*tangnv*%20Fruit&token=xoxp-4054076347-8547304386-17439255827-27d44a4477&username=Ramsay
+    uri: https://slack.com/api/chat.postMessage?channel=%23lunch&link_names=1&mrkdwn=true&text=%3C!here%3E%20We%20have%20ordered%20lunch%20successfully.%20:dancer:%0A*cuongvu*%20Tofu%0A*tangnv*%20Fruit&token=<SLACK_TOKEN>&username=Ramsay
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 02 Jan 2016 02:56:41 GMT
+      - Sun, 10 Jan 2016 13:36:43 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -52,8 +52,8 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1451703401.000008","message":{"text":"<!here>
-        We have ordered lunch successfully. :dancer:\n*cuongvu* Tofu\n*tangnv* Fruit","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1451703401.000008"}}'
+      string: '{"ok":true,"channel":"C08MCMJ8K","ts":"1452433002.000003","message":{"text":"<!here>
+        We have ordered lunch successfully. :dancer:\n*cuongvu* Tofu\n*tangnv* Fruit","username":"Ramsay","mrkdwn":true,"type":"message","subtype":"bot_message","ts":"1452433002.000003"}}'
     http_version: 
-  recorded_at: Sat, 02 Jan 2016 02:56:42 GMT
+  recorded_at: Sun, 10 Jan 2016 13:36:43 GMT
 recorded_with: VCR 3.0.1

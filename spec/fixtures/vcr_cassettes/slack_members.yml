@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://slack.com/api/users.list?presence=true&pretty=1&token=xoxp-4054076347-8547304386-17439255827-27d44a4477
+    uri: https://slack.com/api/users.list?presence=true&pretty=1&token=<SLACK_TOKEN>
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 02 Jan 2016 02:51:23 GMT
+      - Sun, 10 Jan 2016 13:36:40 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -47,7 +47,7 @@ http_interactions:
       X-Xss-Protection:
       - '0'
       Content-Length:
-      - '2802'
+      - '2772'
       Connection:
       - keep-alive
     body:
@@ -89,7 +89,7 @@ http_interactions:
                     "is_restricted": false,
                     "is_ultra_restricted": false,
                     "is_bot": false,
-                    "presence": "active"
+                    "presence": "away"
                 },
                 {
                     "id": "U08G38YBC",
@@ -221,7 +221,7 @@ http_interactions:
                     "is_restricted": false,
                     "is_ultra_restricted": false,
                     "is_bot": false,
-                    "presence": "active"
+                    "presence": "away"
                 },
                 {
                     "id": "U0FFUKU1M",
@@ -351,13 +351,7 @@ http_interactions:
                     "id": "U0AQ3SM42",
                     "team_id": "T041L28A7",
                     "name": "pitt",
-                    "deleted": false,
-                    "status": null,
-                    "color": "2b6836",
-                    "real_name": "",
-                    "tz": null,
-                    "tz_label": "Pacific Standard Time",
-                    "tz_offset": -28800,
+                    "deleted": true,
                     "profile": {
                         "bot_id": "B0APZ1Z7G",
                         "image_24": "https:\/\/avatars.slack-edge.com\/2015-09-18\/10966445621_49e770dca9e3ec184809_24.jpg",
@@ -371,13 +365,8 @@ http_interactions:
                         "real_name": "",
                         "real_name_normalized": ""
                     },
-                    "is_admin": false,
-                    "is_owner": false,
-                    "is_primary_owner": false,
-                    "is_restricted": false,
-                    "is_ultra_restricted": false,
                     "is_bot": true,
-                    "presence": "active"
+                    "presence": "away"
                 },
                 {
                     "id": "U0GHA5GQY",
@@ -513,8 +502,8 @@ http_interactions:
                     "is_bot": false
                 }
             ],
-            "cache_ts": 1451703083
+            "cache_ts": 1452433000
         }
     http_version: 
-  recorded_at: Sat, 02 Jan 2016 02:51:23 GMT
+  recorded_at: Sun, 10 Jan 2016 13:36:40 GMT
 recorded_with: VCR 3.0.1

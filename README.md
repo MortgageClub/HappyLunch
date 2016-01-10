@@ -38,7 +38,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
  - Implement [Slack's Incoming Webhook](https://api.slack.com/incoming-webhooks).
  - Implement [Slack's Outgoing Webhooks](https://api.slack.com/outgoing-webhooks).
  - Outgoing's Trigger Word: #happylunch (or whatever you like).
- - Outgoing's URL: http://your-domain/lunch/order
+ - Outgoing's URL: http://your-domain/orders
  - Notice: your channel you choose will be a place members place orders.
 
 - Deploy the Rails app to a hosting provider.

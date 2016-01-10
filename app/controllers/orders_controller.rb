@@ -1,13 +1,9 @@
-class LunchController < ApplicationController
-  before_action :check_request, only: :order
+class OrdersController < ApplicationController
+  before_action :check_request, only: :create
 
-  def menu
-    render status: 200, json: Dish.today
-  end
-
-  def order
+  def create
     SaveOrderItemService.call(params)
-    render status: 200, json: "order"
+    render status: 200, json: "create"
   end
 
   private
