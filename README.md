@@ -41,7 +41,7 @@ We thought that we could create a Slackbot to automate all of these steps. So ou
  - Outgoing's URL: http://your-domain/orders
  - Notice: your channel you choose will be a place members place orders.
 
-- Deploy the Rails app to a hosting provider.
+- Deploy the Rails app to a hosting provider. **Notice:** if you don't use Heroku, you need to install [PhantomJS](http://phantomjs.org) in your server.
 
 - Set contact information, [Slack's authentication token](https://api.slack.com/methods/chat.postMessage) and [Slack's outgoing token](https://api.slack.com/outgoing-webhooks) to environment variables.
 
