@@ -25,6 +25,7 @@ gem 'nokogiri'
 gem 'selenium-webdriver'
 gem 'capybara'
 gem 'launchy'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'shoulda-matchers'

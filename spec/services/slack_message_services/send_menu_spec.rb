@@ -5,7 +5,7 @@ describe SlackMessageServices::SendMenu do
   let!(:fruit) { FactoryGirl.create(:dish, name: "Fruit", price: 15, item_number: 2) }
 
   describe ".call" do
-    it "Sends all list of dishes to lunch channel" do
+    it "sends all list of dishes to lunch channel" do
       VCR.use_cassette("list_of_dishes") do
         expect(described_class.call).to be_truthy
       end
