@@ -16,7 +16,9 @@ describe SlackMessageServices::NotifyPeopleWhoseUnavailableItems do
 
     context "with many members" do
       it "formats a proper content" do
-        expect(described_class.format_content([first_item, second_item])).to eq("@cuongvu, @tangnv Sorry! pho, tofu are not available. Please choose others, I'll reorder lunch in five minutes later.")
+        expect(described_class.format_content([first_item, second_item])).to eq(
+          "@cuongvu, @tangnv Sorry! pho, tofu are not available. Please choose others, I'll reorder lunch in five minutes later."
+        )
       end
     end
   end

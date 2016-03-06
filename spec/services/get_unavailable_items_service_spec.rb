@@ -7,14 +7,14 @@ describe GetUnavailableItemsService do
 
   context "when items are unavailable" do
     it "returns array containing unavailable items" do
-      allow(GetMenuService).to receive(:call).and_return([{name: "fish", price: 20000, number: 2}])
+      allow(GetMenuService).to receive(:call).and_return([{name: "fish", price: 20_000, number: 2}])
       expect(described_class.call).to eq([order_item])
     end
   end
 
   context "when all items are available" do
     it "returns an empty array" do
-      allow(GetMenuService).to receive(:call).and_return([{name: "pho", price: 20000, number: 1}])
+      allow(GetMenuService).to receive(:call).and_return([{name: "pho", price: 20_000, number: 1}])
 
       expect(described_class.call).to be_empty
     end

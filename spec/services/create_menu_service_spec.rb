@@ -2,12 +2,12 @@ require "rails_helper"
 
 describe CreateMenuService do
   describe ".call" do
-    let(:menu) {
-      menu = [
+    let(:menu) do
+      [
         {name: "pho", price: 30_000, number: 1},
         {name: "com tam", price: 25_000, number: 2}
       ]
-    }
+    end
 
     it "calls GetMenuService" do
       expect(GetMenuService).to receive(:call).and_return(menu)
