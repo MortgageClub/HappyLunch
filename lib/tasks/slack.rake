@@ -1,6 +1,6 @@
 namespace :slack do
   task get_menu: :environment do
-    GetMenuService.call
+    CreateMenuService.call
     SlackMessageServices::SendMenu.call
   end
 
@@ -9,10 +9,8 @@ namespace :slack do
   end
 
   task order_lunch: :environment do
-    if OrderLunchService.new.call
+    if OrderLunchService.call
       SlackMessageServices::SendSuccessMessage.call
-    else
-      SlackMessageServices::SendErrorMessage.call
     end
   end
 end
