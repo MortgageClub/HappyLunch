@@ -56,7 +56,7 @@ class SubmitOrderService
     @crawler.find("input[type=submit]").click
   end
 
-  def set_up_crawler
+  def self.set_up_crawler
     Capybara.register_driver :poltergeist do |app|
       Capybara::Poltergeist::Driver.new(app, js_errors: false, timeout: 60, inspector: true, phantomjs_options: ['--ignore-ssl-errors=yes', '--local-to-remote-url-access=yes'])
     end
@@ -66,12 +66,12 @@ class SubmitOrderService
     # Capybara::Session.new(:selenium)
   end
 
-  def close_crawler
+  def self.close_crawler
     @crawler.driver.quit
   end
 
   # rubocop:disable LineLength
-  def check_status
+  def self.check_status
     success_message = @crawler.all(".report", text: "Cám ơn quý khách đã quan tâm đến dịch vụ của chúng tôi! Yêu cầu của quý khách sẽ được phản hồi trong thời gian sớm nhất.")[0]
     @result = success_message ? true : false
   end
