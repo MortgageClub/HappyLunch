@@ -2,7 +2,12 @@ class OrdersController < ApplicationController
   before_action :check_request, only: :create
 
   def create
-    SaveOrderItemService.call(params)
+    service = SaveOrderItemService.new(params)
+
+    if service.call
+      SlackMessageServices::SendConfirmationMessageToMember.call(service.saved_order_items)
+    end
+
     render status: 200, json: "create"
   end
 
