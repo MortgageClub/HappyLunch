@@ -1,6 +1,8 @@
 class SaveOrderItemService
+  attr_reader :info, :saved_order_items
+  attr_accessor :success
+
   LUNCH_CODE = "#happylunch".freeze
-  attr_reader :info, :success, :saved_order_items
 
   def initialize(info)
     @info = info
