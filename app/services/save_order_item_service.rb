@@ -1,15 +1,16 @@
 class SaveOrderItemService
+  attr_reader :info, :saved_order_items
+
   LUNCH_CODE = "#happylunch".freeze
-  attr_reader :info, :success, :saved_order_items
 
   def initialize(info)
     @info = info
-    @success = true
     @saved_order_items = []
   end
 
   # rubocop:disable MethodLength
   def call
+    success = true
     return false unless today_order
     destroy_old_orders(info["user_name"])
     begin
