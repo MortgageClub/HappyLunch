@@ -1,6 +1,5 @@
-![logo](http://www.mortgageclub.io/assets/mortgageclubLOGO-5d49c4f9105893724104ce9b480ce03ebcf9f034b6e938da552c659903746da4.png)
-
-[![Circle CI](https://circleci.com/gh/MortgageClub/HappyLunch/tree/master.svg?style=svg)](https://circleci.com/gh/MortgageClub/HappyLunch/tree/master)
+![Screenshots] (http://s7.postimg.org/h9sbbj0ob/Screen_Shot_2016_03_26_at_3_17_47_PM.png)
+![Screenshots] (http://s14.postimg.org/hcpaag8td/Screen_Shot_2016_03_26_at_3_22_53_PM.png)
 
 ##Background
 
